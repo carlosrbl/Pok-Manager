@@ -1,0 +1,678 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.contenedor {
+    background-image: url("../img/fondo.jpg");
+    width: 97%;
+    height: 643px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 28px;
+    text-align: left;
+}
+
+.contenedor p {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+#negrita {
+    font-weight: bold;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: lightgreen;
+    border-bottom: 3px solid black;
+    padding: 20px;
+}
+
+.imagen {
+    max-width: 250px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.perfil {
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    background-color: aliceblue;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.button {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 120px;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.perfil:hover .button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.perfil img {
+    max-width: 50px;
+    max-height: 50px;
+    border: 1px solid lightgreen;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+
+.perfil h2 {
+    font-size: 20px;
+}
+
+.formulario {
+    padding: 20px;
+    margin-left: auto;
+    background-color: aliceblue;
+    border: 3px solid transparent;
+    border-radius: 10px;
+}
+
+.formulario form input {
+    border: 1px solid lightgreen;
+    padding: 5px;
+}
+
+.formulario form button {
+    padding: 5px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    background-color: lightgreen;
+    color: white;
+    cursor: pointer;
+}
+
+.formulario a {
+    text-decoration: none;
+    color: lightgreen;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+footer {
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid black;
+}
+
+#formulario-registro {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#formulario-registro form {
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario-registro form label
+{
+    margin-bottom: 10px;
+}
+
+#formulario-registro form input
+{
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#formulario-registro form button {
+    padding: 5px;
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: lightgreen;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+        
+.tab button:hover {
+    background-color: #ddd;
+}
+        
+.tab button.active {
+    background-color: #ccc;
+}
+        
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.cuadro {
+    padding: 20px;
+    background-color: lightcyan;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    border-left: 3px solid lightgreen;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.cuadro p {
+    font-size: 12px;
+}
+
+.sobre {
+    height: 479px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.sobre h3 {
+    color: green;
+}
+
+.sobre img {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre img:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.premio {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.premio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.premio button {
+    margin-top: 15px;
+    padding: 5px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    background-color: yellowgreen;
+    color: black;
+    cursor: pointer;
+}
+
+.premio h3 {
+    color: green;
+    text-align: center;
+}
+
+.pokemons {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 60px;
+    padding: 40px;
+    justify-items: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pokemon {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 14px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.legendario {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid yellow;
+    padding: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 140px;
+}
+
+.pokemon:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.legendario:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    background-color: #e8e8e8;
+    padding: 8px;
+}
+
+.legendario img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    background-color: #e8e8e8;
+    padding: 8px;
+}
+
+.pokemon p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.legendario p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(255, 102, 0);
+    margin: 0;
+}
+
+.coleccion {
+    text-align: center;
+}
+
+.coleccion img {
+    margin-top: 17px;
+    margin-bottom: 30px;
+}
+
+.registro {
+    display: flex;
+    align-items: center;
+}
+
+.registro_imagen {
+    margin-right: 50px;
+}
+
+.registro_imagen img {
+    width: 400px;
+    height: 700px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.cuadrado {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.cuadrado p {
+    color: green;
+    font-weight: bold;
+}
+
+.info_coleccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #f1f1f1;
+    padding: 30px 70px;
+    margin: 0 auto;
+    max-width: 300px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.perfil_usuario {
+    background-color: #f1f1f1;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 571px;
+}
+
+.perfil_usuario button {
+    background-color: red;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.perfil_datos {
+    display: flex;
+    gap: 50px;
+}
+
+.perfil_datos img {
+    max-width: 140px;
+    max-height: 140px;
+    border: 1px solid lightgreen;
+    border-radius: 50%;
+}
+
+.perfil_extra {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.perfil_textos {
+    flex: 1;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 16px 50px;
+    font-size: 15px;
+}
+
+.perfil_complementario {
+    
+    text-align: center;
+    flex: 1;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#dialog-eliminar-cuenta {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+#dialog-eliminar-cuenta button {
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tabla {
+    margin-top: 34px;
+    margin-bottom: 34px;
+    background-color: #e8e8e8;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 40px 60px;
+}
+
+.tabla h1 {
+    color: green;
+    text-align: left;
+}
+
+.tabla img {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    width: 600px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.tabla table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla table thead {
+    background-color: lightgreen;
+}
+
+.tabla table th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla button {
+    background-color: lightgreen;
+    color: white;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#formulario-usuario {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#formulario-usuario h1 {
+    margin-bottom: 50px;
+}
+
+#formulario-usuario form {
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario-usuario form label
+{
+    margin-bottom: 10px;
+}
+
+#formulario-usuario form input
+{
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#formulario-usuario form button {
+    padding: 5px;
+    width: 130px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: lightgreen;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#admin {
+    color: red;
+}
+
+.combate {
+    background-color: #e8e8e8;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.equipos {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 30%;
+    height: 700px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloEquipo {
+    color: green;
+}
+
+.legendario2 {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid yellow;
+    padding: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 140px;
+}
+
+.legendario2 p {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(255, 102, 0);
+    margin: 0;
+}
+
+.legendario2:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.combateEquipo {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 14px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 140px;
+}
+
+.combateEquipo p {
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.combateEquipo:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#start {
+    max-width: 50px;
+    max-height: 50px;
+    cursor: pointer;
+}
+
+.partida {
+    background-color: #e8e8e8;
+    padding: 60px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.partida ol li {
+  margin-bottom: 12px; 
+  line-height: 1.5;    
+}
+
+#generarCombate {
+    background-color: lightgreen;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
